@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionarios de Bash Scripting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+<body class="p-6 md:p-12 flex items-center justify-center min-h-screen">
+
+    <div id="app-container" class="container">
+        
+        <!-- Vista de selección de módulos -->
+        <div id="module-selection-container" class="card">
+            <h1 style="font-size: 2.25rem;">Cuestionarios de Bash Scripting</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 1.5rem;">Selecciona un módulo para comenzar el cuestionario:</p>
+            <div id="module-buttons-area" class="module-list">
+                <!-- Los botones de módulos se generarán aquí -->
+            </div>
+        </div>
+
+        <!-- Vista del cuestionario (oculta por defecto) -->
+        <div id="quiz-container" class="card card-quiz hidden">
+            <!-- Título del cuestionario -->
+            <h1 id="module-title" style="text-align: center; margin-bottom: 1.5rem;"></h1>
+
+            <!-- Contador de preguntas -->
+            <p id="question-counter" style="text-align: center; font-size: 0.875rem; font-weight: 600; color: #6b7280; margin-bottom: 1rem;"></p>
+
+            <!-- Área de la pregunta -->
+            <div id="question-area" style="margin-bottom: 2rem;">
+                <p id="question-text" style="font-size: 1.125rem; font-weight: 500; color: #374151;"></p>
+            </div>
+
+            <!-- Área de opciones -->
+            <div id="options-area" class="module-list" style="margin-bottom: 2rem;">
+                <!-- Los botones de opciones se generarán aquí -->
+            </div>
+
+            <!-- Área de explicación (oculta por defecto) -->
+            <div id="explanation-area" class="explanation hidden">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Explicación:</p>
+                <p id="explanation-text" style="font-size: 0.875rem;"></p>
+            </div>
+
+            <!-- Controles de navegación -->
+            <div class="button-group">
+                <button id="next-button" class="next-button hidden">
+                    Siguiente
+                </button>
+                <button id="back-button" class="back-button hidden">
+                    Volver al Menú
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
